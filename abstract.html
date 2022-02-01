@@ -3,13 +3,22 @@
     <head>
         <meta charset="utf-8" />  
         <title>Here is my abstract SVG artwork</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        
-        <svg>
 
-           <rect y="25px" width="100px" height="100px"/>
-           <rect x="125px" width="100px" height="100px"/>
+    <body>
+
+        <h1>Abstract</h1>
+
+        <p>Get a load of this stuff!</p>
+
+        <p id="yellowparagraph">Wow, such yellow!</p>
+        
+        <svg height="500px" width="500px" style="background-color: beige;">
+
+           <rect class="square" y="25px" width="100px" height="100px" style="fill: orange;"/>
+           <rect class="square" x="125px" width="100px" height="100px"/>
+           <circle cx="100px" cy="125px" r="50px" fill="rgb(8,120,100)" stroke="yellow" stroke-width="10px"/>
             
         </svg>
 
