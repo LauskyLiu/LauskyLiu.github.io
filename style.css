@@ -1,4 +1,4 @@
-    body{background-color: #222222;
+    body{background-color: #22d222;
     color: white;
     }
 
@@ -7,9 +7,10 @@
     font-size: 18px;
     } 
 
-    h1 {font-size: 64px; color: 
-        white; background-color:
-        rgb(226, 80, 182); margin: 0;
+    h1 {font-size: 64px; 
+        color: white; 
+        background-color:rgb(226, 80, 182); 
+        margin: 0;
         padding: 10px;
         text-align: center;
     }
