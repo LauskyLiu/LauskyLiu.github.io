@@ -1,0 +1,25 @@
+body{background-color: black;
+color: white;
+}
+
+h1 {font-size: 60px;
+color: azure;
+background-color: black;
+margin: 50px;
+padding: 40px;
+text-align: center;
+}
+
+p#date {font-size: 50px;
+text-align: center;}
+
+p#festival {font-size: 50px;
+    text-align: center;}
+
+p#murmur {font-size: 10px;
+    text-align: center;}
+
+a {color: white;
+text-align:center;
+display:block;
+font-size: 30px;}

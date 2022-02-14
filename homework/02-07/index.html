@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />  
+        <title>JavaScript Assignment</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <h1 id="welcome">Stay Hungry Stay Foolish</h1>
+
+        <p id="date"></p>
+        <p id="festival"></p>
+        <p id="murmur"></p>
+
+        <script src="math.js"></script>
+
+        <script>
+
+        var title = document.getElementById("date")
+        console.log(title)
+        title.innerHTML = "Today's date is" + " " + today.month + "/" + today.day + "/" + today.year;
+
+        var title = document.getElementById("festival")
+        console.log(title)
+        title.innerHTML = "And today is" + today.festival + "!"
+
+        var title = document.getElementById("murmur")
+        console.log(title)
+        title.innerHTML = murmur("OMG")
+
+        </script>
+
+
+        <br>
+        <br>
+        <a href="https://lauskyliu.github.io">Back to home</a>
+
+
+    </body>
+
+
+
+</html>

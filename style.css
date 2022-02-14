@@ -1,22 +1,22 @@
-    body{background-color: #22d222;
-    color: white;
-    }
+body{background-color: #22d222;
+color: white;
+}
 
-    p#yellowparagraph {color: yellow;
-    font-family: "Comic Sans MS";
-    font-size: 18px;
-    } 
+p#yellowparagraph {color: yellow;
+font-family: "Comic Sans MS";
+font-size: 18px;
+} 
 
-    h1 {font-size: 64px; 
-        color: white; 
-        background-color:rgb(226, 80, 182); 
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-    }
+h1 {font-size: 64px; 
+    color: white; 
+    background-color:rgb(226, 80, 182); 
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
 
-    .square {
-        fill: darkgoldenrod;
-        height: 100px
-        width=100px;
-    }
+.square {
+    fill: darkgoldenrod;
+    height: 100px
+    width=100px;
+}
