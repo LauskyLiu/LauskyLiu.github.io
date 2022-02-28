@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>D3 Assignment</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+            <style>
+        
+            .center {
+              margin: 0;
+              position: absolute;
+              top: 10%;
+              left: 45%;
+              -ms-transform: translateY(-50%,-50%);
+              transform: translateY(-50%,-50%);
+            }
+            </style>
+            
+           
+            <div class="center">
+                <button onclick="triggerTransition()">Yo</button>
+            </div>
+
+
+        <svg id="movingSquare" width="400px" height="600px"></svg>
+
+    </head>
+
+
+    <script>
+
+        var numbers = [50, 100, 150, 200, 250, 300, 350]
+        
+        // Enter
+        d3.select("#movingSquare")
+          .selectAll("mysquares")
+          .data(numbers)
+          .enter()
+          .append("rect")
+            .attr("x", function(d){return d} )
+            .attr("y", 40)
+            .attr("width", 30)
+            .attr("height", 30)
+            .style("fill", "pink")
+   
+        
+        // Update
+        function triggerTransition(){
+          d3.selectAll("rect")
+            .transition()
+            .duration(2200)
+            .attr("y", 300)
+            .style("fill", "green")
+            .delay(function(i){return(i*3)})
+        }
+        
+        </script>
+
+        <a href="https://lauskyliu.github.io">Back to home</a>
+
+</html>
