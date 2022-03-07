@@ -19,10 +19,10 @@
 
         const svg = d3.select("#BidenSatisfaction")
                         .append("svg")
-                        .attr("width", width + margin.left + margin.right)
-                        .attr("height", height + margin.top + margin.bottom)
+                            .attr("width", width + margin.left + margin.right)
+                            .attr("height", height + margin.top + margin.bottom)
                         .append("g")
-                        .attr("transform",`translate(${margin.left},${margin.top})`);
+                            .attr("transform",`translate(${margin.left},${margin.top})`);
 
         d3.csv("approval_topline.csv").then(function(data){
 
@@ -73,7 +73,7 @@
 
 
             function update(selectedGroup){
-                const dataFilter = data.map(function(d){return {date:Date(d.Date), value:d[selectedGroup]} })
+                const dataFilter = data.map(function(d){return {date:new Date(d.Date), value:d[selectedGroup]} })
             
                 line.datum(dataFilter)
                     .transition()

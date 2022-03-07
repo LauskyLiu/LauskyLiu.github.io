@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>APIs Testing Page</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+
+  <body>
+
+    <p>Please inspect and see in the console.</p>
+
+    <script>
+
+    var text = {
+    explain: "Trading in cryptocurrency has been thoroughly banned in China to maintain the Chinese yuan’s dominance. Last month, China's Supreme Court ruled that some virtual asset transactions can constitute illegal fundraising, paving the way for judicial prosecution of the crypto industry.",
+    source: "Data from: Cambridge Centre for Alternative Finance, Cambridge Judge Business School, University of Cambridge",
+    link: "Webstie: https://ccaf.io/cbeci/mining_map",
+    tableOne: "Table1: Evolution of China's hashrate share",
+    tableTwo: "Table2: Evolution of Chinese provinces' hashrate share"
+    };
+    
+    console.log(text.explain)
+    console.log(text.source)
+    console.log(text.link)
+    console.log(text.tableOne)
+    console.log(text.tableTwo)
+
+    d3.csv("China_Crypto.csv")
+          .then(function(ChinaCrypto) {
+            console.log(ChinaCrypto);
+          });
+
+    d3.csv("China_Crypto_2.csv")
+          .then(function(ChinaCryptoTwo) {
+            console.log(ChinaCryptoTwo);
+          });      
+
+    </script>
+
+<a href="https://lauskyliu.github.io">Back to home</a>
+
+  </body>
+</html>
