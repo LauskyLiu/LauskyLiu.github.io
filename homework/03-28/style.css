@@ -13,7 +13,7 @@ body{
 .author{
   text-align:center;
   position:relative;
-  top:180px;
+  top:200px;
 }
 
 .BodyParagraph 
@@ -31,7 +31,7 @@ body{
 #text{
   text-align:center;
   position:relative;
-  top:170px;
+  top:200px;
   font-size:6em;
 }
 
