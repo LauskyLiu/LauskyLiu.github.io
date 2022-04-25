@@ -1,6 +1,6 @@
-const margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 960 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+const margin = {top: 30, right: 30, bottom: 30, left: 60},
+    width = 900 - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom;
 
 const svg = d3.select("#chart1")
     .append("svg")
@@ -31,15 +31,16 @@ const svg = d3.select("#chart1")
                 .attr("stroke", "black")
                 .attr("stroke-width", 1.5)
                 .attr("d", d3.line()
-                  .curve(d3.curveBasis)
+                  .curve(d3.curveMonotoneX)
                   .x(d => x(d.date))
                   .y(d => y(d.value))
                   )
 
-                  const Tooltip = d3.select("#chart1")
+                  const Tooltip = d3.select("body")
                   .append("div")
                   .style("opacity", 0)
                   .attr("class", "tooltip")
+                  .style("position", "absolute")
                   .style("background-color", "white")
                   .style("border", "solid")
                   .style("border-width", "2px")
@@ -53,8 +54,8 @@ const svg = d3.select("#chart1")
                   const mousemove = function(event,d) {
                     Tooltip
                       .html("Exact value: " + d.value)
-                      .style("left", `${event.layerX+10}px`)
-                      .style("top", `${event.layerY}px`)
+                      .style("left", `${event.pageX+10}px`)
+                      .style("top", `${event.pageY}px`)
                   }
                   const mouseleave = function(event,d) {
                     Tooltip
