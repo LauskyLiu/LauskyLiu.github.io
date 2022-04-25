@@ -7,6 +7,8 @@ d3.csv("China_Crypto_2.csv",d => {
 
     const sumstat = d3.group(data, d => d.city)
 
+        console.log (sumstat)
+
     allKeys = new Set(data.map(d=>d.city))
 
     const svg = d3.select("#chart2")
@@ -20,7 +22,7 @@ d3.csv("China_Crypto_2.csv",d => {
       .attr("transform",
             `translate(${margin.left},${margin.top})`);
 
-    const x = d3.scaleLinear()
+    const x = d3.scaleTime()
     .domain(d3.extent(data, function(d) { return d.date }))
     .range([ 0, width ]);
     svg
@@ -35,7 +37,7 @@ d3.csv("China_Crypto_2.csv",d => {
     .call(d3.axisLeft(y).ticks(5));
 
     const color = d3.scaleOrdinal()
-    .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999', '#444000'])
+    .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#639999', '#444000'])
 
     svg
     .append("path")

@@ -1,8 +1,9 @@
-const margin = {top: 30, right: 30, bottom: 30, left: 60},
+function chartOne () {
+  const margin = {top: 30, right: 30, bottom: 30, left: 60},
     width = 900 - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom;
 
-const svg = d3.select("#chart1")
+    const svg = d3.select("#chart1")
     .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -78,3 +79,8 @@ const svg = d3.select("#chart1")
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
 })
+}
+
+chartOne ()
+
+
